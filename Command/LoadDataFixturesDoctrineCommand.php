@@ -84,7 +84,6 @@ EOT
                 $paths[] = $bundle->getPath().'/DataFixtures/ORM';
             }
         }
-
         array_merge($paths, $this->getContainer()->getParameter('doctrine_fixtures.paths', array()));
 
         $loader = new DataFixturesLoader($this->getContainer());
