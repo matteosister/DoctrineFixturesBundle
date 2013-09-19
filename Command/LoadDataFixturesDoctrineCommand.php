@@ -85,6 +85,8 @@ EOT
             }
         }
 
+        array_merge($paths, $this->getContainer()->getParameter('doctrine_fixtures.paths', array()));
+
         $loader = new DataFixturesLoader($this->getContainer());
         foreach ($paths as $path) {
             if (is_dir($path)) {
